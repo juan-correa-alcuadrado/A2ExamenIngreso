@@ -1,0 +1,2219 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Api_Servicios_Seguridad</name>
+    </assembly>
+    <members>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.ContextosDB.ContextoDbUtil">
+            <summary>
+            Contexto de conexión hacia la base de datos
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.ContextosDB.ContextoDbUtil.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{A2Utilidades_Servicios_Seguridad_APP.ContextosDB.ContextoDbUtil})">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.ContextosDB.ContextoDbUtil.Aplicaciones">
+            <summary>
+            Entidad para el manejo de las Aplicaciones (tblAplicaciones)
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.ContextosDB.ContextoDbUtil.MenusPorAplicacion">
+            <summary>
+            Entidad para el manejo de las Aplicaciones (tblAplicaciones)
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.ContextosDB.ContextoDbUtil.TiposObjetos">
+            <summary>
+            Retorna los tipos de objeto asociados a la aplicacion
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.ContextosDB.ContextoDbUtil.Toolbars">
+            <summary>
+            Retorna los toolbar asociados a la aplicacion
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.ContextosDB.ContextoDbUtil.Usuarios">
+            <summary>
+            Retorna los usuarios asociados a la aplicacion
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.ContextosDB.ContextoDbUtil.Grupos">
+            <summary>
+            Retorna los usuarios asociados a la aplicacion
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.ContextosDB.ContextoDbUtil.Roles">
+            <summary>
+            Entidad para el manejo de los Roles (tblRoles)
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.ContextosDB.ContextoDbUtil.DivisionesPorAplicacion">
+            <summary>
+            Entidad para el manejo de las Divisiones por aplicación (tblDivisiones)
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.ContextosDB.ContextoDbUtil.AplicacionesPorGrupos">
+            <summary>
+            Entidad para el manejo de los Grupos por aplicación (tblGruposPorAplicacion)
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.ContextosDB.ContextoDbUtil.RolesAplicacionesPorGrupos">
+            <summary>
+            Entidad para el manejo de los Grupos por aplicación (tblRolesPorGrupo)
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.ContextosDB.ContextoDbUtil.UsuariosPorGrupos">
+            <summary>
+            Entidad para el manejo de los Grupos por aplicación (tblUsuariosPorGrupo)
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.ContextosDB.ContextoDbUtil.AplicacionesPorUsuarios">
+            <summary>
+            Entidad para el manejo de las aplicaciones por Usuario (tblUsuariosPorAplicacion)
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.ContextosDB.ContextoDbUtil.RolesAplicacionesPorUsuarios">
+            <summary>
+            Entidad para el manejo de los roles de una aplicación por usuario (tblRolesPorUsuario)
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.ContextosDB.ContextoDbUtil.GruposPorUsuarios">
+            <summary>
+            Entidad para el manejo de los grupos por Usuario (tblUsuariosPorGrupo)
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.ContextosDB.ContextoDbUtil.MensajesRespuesta">
+            <summary>
+            Entidad para el manejo del guardado de los registros
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.TestController">
+            <summary>
+            Controlador de pruebas para saber sí el api esta respondiendo peticiones
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.TestController.#ctor(A2Utilidades_Servicios_Seguridad_APP.Interfaces.Genericas.IGenerico)">
+            <summary>
+            Constructor de controlador
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.TestController.Get">
+            <summary>
+            Test para saber sí el api esta respondiendo las peticiones
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.TestController.Get_User">
+            <summary>
+            Test para saber que usuario esta tomando el servicio
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.AplicacionesController">
+            <summary>
+            Controlador utilizado para todos los procesos deo objeto aplicaciones
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.AplicacionesController.#ctor(A2Utilidades_Servicios_Seguridad_APP.Interfaces.Aplicaciones.IAplicaciones,A2Utilidades_Servicios_Seguridad_APP.Interfaces.Genericas.IGenerico,A2Utilidades_Servicios_Seguridad_APP.ContextosDB.ContextoDbUtil,A2Utilidades.Web.API.Generico.Utilidades.UtilidadesGenericas,AutoMapper.IMapper)">
+            <summary>
+            Constructor de la clase
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.AplicacionesController.Get_Aplicacion(System.Int32)">
+            <summary>
+            Consulta operaciones realizadas por un codigo oyd a una fecha agrupadas por especie
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.AplicacionesController.Get_Aplicaciones">
+            <summary>
+            Consulta operaciones realizadas por un codigo oyd a una fecha agrupadas por especie
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.AplicacionesController.Get_ToolbarPorAplicacion(System.Int32,System.Int32)">
+            <summary>
+            Consulta todos los toolbars asociados a una aplicacion
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.AplicacionesController.Get_ToolbarsPorAplicacion(System.Int32)">
+            <summary>
+            Consulta todos los toolbars asociados a una aplicacion
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.AplicacionesController.Get_UsuariosPorAplicacion(System.Int32)">
+            <summary>
+            Consulta todos los usuarios asociados a la aplicacion
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.AplicacionesController.Get_UsuarioPorAplicacion(System.Int32,System.Int32)">
+            <summary>
+            Consulta todos los usuarios asociados a la aplicacion
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.AplicacionesController.Get_GrupoPorAplicacion(System.Int32,System.Int32)">
+            <summary>
+            Consulta todos los grupos asociados a la aplicacion
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.AplicacionesController.Get_GruposPorAplicacion(System.Int32)">
+            <summary>
+            Consulta todos los grupos asociados a la aplicacion
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.AplicacionesController.Get_RolPorAplicacion(System.Int32,System.Int32)">
+            <summary>
+            Consulta todos los roles asociados a la aplicacion
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.AplicacionesController.Get_RolPorAplicacion(System.Int32)">
+            <summary>
+            Consulta todos los roles asociados a la aplicacion
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.AplicacionesController.Put(System.Nullable{System.Int32},A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.AplicacionDTO)">
+            <summary>
+            Actualiza aplicaciones en el sistema de seguridad
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.AplicacionesController.Post(A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.AplicacionDTO)">
+            <summary>
+            Crea aplicaciones nuevas en el sistema de seguridad
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.AplicacionesController.Get_MenuPorAplicacion(System.Int32)">
+            <summary>
+            Consulta los menus asociados a una aplicacion
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.AplicacionesController.Get_MenuPorAplicacion(System.Int32,System.Int32)">
+            <summary>
+            Consulta un menu especifico asociado a una aplicacion
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.AplicacionesController.Put_Roles(System.Int32,System.Nullable{System.Int32},A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Roles.RolDTO)">
+            <summary>
+            Modifica menus por aplicación
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.AplicacionesController.Put_Roles(System.Int32,A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Roles.RolDTO)">
+            <summary>
+            Actualiza menus por aplicación
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.AplicacionesController.Delete_Rol(System.Int32,System.Int32)">
+            <summary>
+            Elimina menus por aplicación
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.AplicacionesController.Get_ObjetoPorAplicacion(System.Int32,System.Int32)">
+            <summary>
+            Consulta todos los objetos de una aplicacion
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.AplicacionesController.Post_ObjetosPorAplicacion(System.Int32,A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Objetos.TipoObjetoDTO)">
+            <summary>
+            Crear tipos de objeto por aplicación
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.AplicacionesController.Post_AsociarGrupos(System.Nullable{System.Int32},System.Collections.Generic.IEnumerable{A2Utilidades_Servicios_Seguridad_APP.Parametros.Genericos.CodigosRelacionados})">
+            <summary>
+            Metodo para realizar la asociación de grupos a una aplicacion
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.AplicacionesController.Post_AsociarUsuarios(System.Nullable{System.Int32},System.Collections.Generic.IEnumerable{A2Utilidades_Servicios_Seguridad_APP.Parametros.Genericos.CodigosRelacionados})">
+            <summary>
+            Metodo para realizar la asociación de grupos a una aplicacion
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.AplicacionesController.Put_Toolbars(System.Int32,System.Nullable{System.Int32},A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Toolbars.ToolbarDTO)">
+            <summary>
+            Modifica toolbars por aplicación
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.AplicacionesController.Post_Toolbars(System.Int32,A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Toolbars.ToolbarDTO)">
+            <summary>
+            Crea toolbars por aplicación
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.AplicacionesController.Delete_Toolbars(System.Int32,System.Int32,A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Toolbars.ToolbarDTO)">
+            <summary>
+            Crea toolbars por aplicación
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.AplicacionesController.Get_UsuariosNoAutorizadosPorAplicacion(System.Int32)">
+            <summary>
+            Consulta todos los usuarios no autorizados en la aplicacion
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.AplicacionesController.Get_GruposNoAutorizadosPorAplicacion(System.Int32)">
+            <summary>
+            Consulta todos los grupos no autorizados en la aplicacion
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.DivisionesController">
+            <summary>
+            Controlador utilizado para todos los procesos deo objeto divisiones
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.DivisionesController.#ctor(A2Utilidades_Servicios_Seguridad_APP.ContextosDB.ContextoDbUtil,A2Utilidades.Web.API.Generico.Utilidades.UtilidadesGenericas,AutoMapper.IMapper)">
+            <summary>
+            Constructor de la clase
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.DivisionesController.Get_DivisionesporAplicacion">
+            <summary>
+            Consulta operaciones realizadas por un codigo oyd a una fecha agrupadas por especie
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.GruposController">
+            <summary>
+            Api v1 de Grupos
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.GruposController.#ctor(A2Utilidades_Servicios_Seguridad_APP.Interfaces.Grupos.IGrupos,A2Utilidades_Servicios_Seguridad_APP.Interfaces.Genericas.IGenerico,A2Utilidades.Web.API.Generico.Utilidades.UtilidadesGenericas,AutoMapper.IMapper)">
+            <summary>
+            Constructor de controlador
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.GruposController.Get">
+            <summary>
+            Metodo de consulta de grupos
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.GruposController.Get(System.Nullable{System.Int32})">
+            <summary>
+            Metodo de consulta de grupos
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.GruposController.Post(A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Grupos.GrupoDTO)">
+            <summary>
+            Metodo para crear grupos
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.GruposController.Put(System.Nullable{System.Int32},A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Grupos.GrupoDTO)">
+            <summary>
+            Metodo para actualizar grupo
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.GruposController.Delete(System.Nullable{System.Int32})">
+            <summary>
+            Metodo para eliminar grupo
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.GruposController.Get_Aplicaciones(System.Nullable{System.Int32})">
+            <summary>
+            Metodo de consultar las aplicaciones que tiene un grupo
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.GruposController.Get_Aplicaciones(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Metodo de consultar las aplicaciones que tiene un grupo
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.GruposController.Get_RolesAplicaciones(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Metodo de consultar los roles de una aplicacion que tiene un grupo
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.GruposController.Get_RolesAplicaciones(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Int32)">
+            <summary>
+            Metodo de consultar un rol en especifico de una aplicacion que tiene un usuario
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.GruposController.Post_AsociarRoles(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Collections.Generic.IEnumerable{A2Utilidades_Servicios_Seguridad_APP.Parametros.Genericos.CodigosRelacionados})">
+            <summary>
+            Metodo para realizar la asociación de roles a un usuario
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.GruposController.Get_Usuarios(System.Nullable{System.Int32})">
+            <summary>
+            Metodo de consultar los usuarios que tiene un grupo
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.GruposController.Get_Usuarios(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Metodo de consultar un usuario que tiene un grupo
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.GruposController.Post_AsociarUsuarios(System.Nullable{System.Int32},System.Collections.Generic.IEnumerable{A2Utilidades_Servicios_Seguridad_APP.Parametros.Genericos.CodigosRelacionados})">
+            <summary>
+            Metodo para realizar la asociación de usuarios a un grupo
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.UsuariosController">
+            <summary>
+            Api v1 de Usuarios
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.UsuariosController.#ctor(A2Utilidades_Servicios_Seguridad_APP.Interfaces.Usuarios.IUsuarios,A2Utilidades_Servicios_Seguridad_APP.Interfaces.Genericas.IGenerico,A2Utilidades.Web.API.Generico.Utilidades.UtilidadesGenericas,AutoMapper.IMapper)">
+            <summary>
+            Constructor de controlador
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.UsuariosController.Get">
+            <summary>
+            Metodo de consulta de usuarios
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.UsuariosController.Get(System.Nullable{System.Int32})">
+            <summary>
+            Metodo de consulta de usuarios
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.UsuariosController.Post(A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Usuarios.UsuarioDTO)">
+            <summary>
+            Metodo para crear usuarios
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.UsuariosController.Put(System.Nullable{System.Int32},A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Usuarios.UsuarioDTO)">
+            <summary>
+            Metodo para actualizar usuario
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.UsuariosController.Delete(System.Nullable{System.Int32})">
+            <summary>
+            Metodo para eliminar usuario
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.UsuariosController.Get_Aplicaciones(System.Nullable{System.Int32})">
+            <summary>
+            Metodo de consultar las aplicaciones que tiene un usuario
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.UsuariosController.Get_Aplicaciones(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Metodo de consultar las aplicaciones que tiene un usuario
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.UsuariosController.Get_RolesAplicaciones(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Metodo de consultar los roles de una aplicacion que tiene un usuario
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.UsuariosController.Get_RolesAplicaciones(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Int32)">
+            <summary>
+            Metodo de consultar un rol en especifico de una aplicacion que tiene un usuario
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.UsuariosController.Post_AsociarRoles(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Collections.Generic.IEnumerable{A2Utilidades_Servicios_Seguridad_APP.Parametros.Genericos.CodigosRelacionados})">
+            <summary>
+            Metodo para realizar la asociación de roles a un usuario
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.UsuariosController.Get_Grupos(System.Nullable{System.Int32})">
+            <summary>
+            Metodo de consultar los grupos que tiene un usuario
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.UsuariosController.Get_Grupos(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Metodo de consultar un grupo que tiene un usuario
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Controllers.v1.UsuariosController.Post_AsociarGrupos(System.Nullable{System.Int32},System.Collections.Generic.IEnumerable{A2Utilidades_Servicios_Seguridad_APP.Parametros.Genericos.CodigosRelacionados})">
+            <summary>
+            Metodo para realizar la asociación de grupos a un usuario
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.Aplicacion">
+            <summary>
+            Entidad que retorna toda la informacion de la aplicacion
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.Aplicacion.id">
+            <summary>
+            Id de la aplicacion
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.Aplicacion.nombre">
+            <summary>
+            nombre de la aplicacion
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.Aplicacion.version">
+            <summary>
+            version de la aplicacion
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.Aplicacion.descripcion">
+            <summary>
+            descripcion corta de la aplicacion
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.Aplicacion.fechacrreacion">
+            <summary>
+            fecha de creacion de la aplicacion
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.Aplicacion.acercade">
+            <summary>
+            texto acerca de. de la aplicacion
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.Aplicacion.soporte">
+            <summary>
+            soporte
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.Aplicacion.derechosautor">
+            <summary>
+            derechos de autor
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.Aplicacion.nombreclave">
+            <summary>
+            nombre clave
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.Aplicacion.win32">
+            <summary>
+            win32
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.Aplicacion.web">
+            <summary>
+            web
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.Aplicacion.hacerloginout">
+            <summary>
+            hacer log inout
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.Aplicacion.hacerlogmenus">
+            <summary>
+            hacer log menus
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.Aplicacion.hacerlognt">
+            <summary>
+            hacer log NT
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.Aplicacion.rutalog">
+            <summary>
+            hacer log NT
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.Aplicacion.separadorroles">
+            <summary>
+            separador de roles
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.Aplicacion.fechaactualizacion">
+            <summary>
+            fecha de la ultima actualizacion
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.Aplicacion.rutabasearchivos">
+            <summary>
+            ruta base de archivos
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.Aplicacion.urlarchivos">
+            <summary>
+            url de archivos
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.MenuPorAplicacion">
+            <summary>
+            Entidad que retorna la informacion de los menus de una aplicacion 
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.MenuPorAplicacion.id">
+            <summary>
+            id menu
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.MenuPorAplicacion.idaplicacion">
+            <summary>
+            id aplicación
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.MenuPorAplicacion.titulo">
+            <summary>
+            titulo del menu
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.MenuPorAplicacion.nombre">
+            <summary>
+            nombre
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.MenuPorAplicacion.orden">
+            <summary>
+            orden
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.MenuPorAplicacion.tooltip">
+            <summary>
+            texto de ayuda
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.MenuPorAplicacion.roles">
+            <summary>
+            roles asociados
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.MenuPorAplicacion.tipoweb">
+            <summary>
+            tipo web
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.MenuPorAplicacion.hipervinculo">
+            <summary>
+            hipervinculo
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.MenuPorAplicacion.paginafondo">
+            <summary>
+            pagina fondo
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.MenuPorAplicacion.descripcion">
+            <summary>
+            descripcion del menu
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.MenuPorAplicacion.tipoobjeto">
+            <summary>
+            tipo objeto
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Aplicaciones.MenuPorAplicacion.toolbar">
+            <summary>
+            toolbar
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Entidades.Divisiones.DivisionporAplicacion">
+            <summary>
+            Entidad que retorna toda la informacion de las divisiones
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Divisiones.DivisionporAplicacion.lngid">
+            <summary>
+            Id de la division
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Entidades.Genericas.GenericoMensajesRespuesta">
+            <summary>
+            Entidad generica para manejar todas las actualizaciones de base de adtos
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Genericas.GenericoMensajesRespuesta.id">
+            <summary>
+            id autogenerado por el sistema
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Genericas.GenericoMensajesRespuesta.mensaje">
+            <summary>
+            mensaje de validación sí es el caso
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Genericas.GenericoMensajesRespuesta.proceso">
+            <summary>
+            Proceso que se esta ejecutando
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Genericas.GenericoMensajesRespuesta.idregistro">
+            <summary>
+            Id del registro actualizado sí es exitoso
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Genericas.GenericoMensajesRespuesta.exitoso">
+            <summary>
+            indica sí fue exitoso la actualización
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Entidades.Genericas.GenericoMensajesRespuestaUnificado">
+            <summary>
+            Respuesta generica que contiene mensajes exitosos y mensajes de error
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Genericas.GenericoMensajesRespuestaUnificado.cantidaderrores">
+            <summary>
+            Indica la cantidad de errores generados
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Genericas.GenericoMensajesRespuestaUnificado.cantidadexitosos">
+            <summary>
+            Indica la cantidad de mensajes exitosos
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Genericas.GenericoMensajesRespuestaUnificado.errores">
+            <summary>
+            Lista que contiene los mensajes de error
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Genericas.GenericoMensajesRespuestaUnificado.exitosos">
+            <summary>
+            Lista que contiene los mensajes de exitosos
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Entidades.Grupos.Grupo">
+            <summary>
+            Entidad para retornar los grupos
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Grupos.Grupo.id">
+            <summary>
+            Propiedad que retorna el id del grupo
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Grupos.Grupo.nombregrupo">
+            <summary>
+            Propiedad que retorna el nombre del grupo
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Grupos.Grupo.descripcion">
+            <summary>
+            Propiedad que retorna la descripcion corta del grupo
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Entidades.Objetos.TipoObjeto">
+            <summary>
+            Entidad que representa un tipo de objeto
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Objetos.TipoObjeto.id">
+            <summary>
+            Id del objeto
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Objetos.TipoObjeto.idaplicacion">
+            <summary>
+            Id de la aplicacion
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Objetos.TipoObjeto.nombre">
+            <summary>
+            nombre del tipo de objeto
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Objetos.TipoObjeto.descripcion">
+            <summary>
+            descripcion
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Objetos.TipoObjeto.borrable">
+            <summary>
+            indica si se puede borrar
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Objetos.TipoObjeto.actualizable">
+            <summary>
+            indica si se puede actualizar
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Entidades.Roles.Rol">
+            <summary>
+            Entidad rol
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Roles.Rol.id">
+            <summary>
+            Propiedad que retorna el id del rol
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Roles.Rol.idaplicacion">
+            <summary>
+            Propiedad que retorna el id de la aplicacion
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Roles.Rol.inicial">
+            <summary>
+            Propiedad que retorna la inicial del rol
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Roles.Rol.nombre">
+            <summary>
+            Propiedad que retorna el nombre del rol
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Roles.Rol.descripcion">
+            <summary>
+            Propiedad que retorna una descripcion corta del rol
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Roles.Rol.actualizable">
+            <summary>
+            Propiedad que indica si el rol se puede actualizar
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Roles.Rol.borrable">
+            <summary>
+            Propiedad que indica si el rol se puede borrar
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Roles.Rol.fechaactualizacion">
+            <summary>
+            Propiedad que retorna la fecha de la ultima modificacion
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Entidades.Toolbars.Toolbar">
+            <summary>
+            entidad que retorna la informacion del toolbar
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Toolbars.Toolbar.id">
+            <summary>
+            Id del toolbar en el sistema
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Toolbars.Toolbar.idaplicacion">
+            <summary>
+            Id de la aplicacion en el sistema
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Toolbars.Toolbar.nombreforma">
+            <summary>
+            nombre de la forma
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Toolbars.Toolbar.nombreboton">
+            <summary>
+            nombre del boton
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Toolbars.Toolbar.orden">
+            <summary>
+            orden del control
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Toolbars.Toolbar.roles">
+            <summary>
+            roles asociados
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Toolbars.Toolbar.tipoboton">
+            <summary>
+            tipo de boton
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Toolbars.Toolbar.accion">
+            <summary>
+            accion que realiza
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Toolbars.Toolbar.imagen">
+            <summary>
+            imagen
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Toolbars.Toolbar.owner">
+            <summary>
+            dueno del objeto
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Toolbars.Toolbar.tooltip">
+            <summary>
+            mensaje de ayuda
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Entidades.Usuarios.Usuario">
+            <summary>
+            Entidad para retornar la información de los usuarios
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Usuarios.Usuario.id">
+            <summary>
+            Propiedad que retorna el id del usuario
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Usuarios.Usuario.login">
+            <summary>
+            Propiedad que retorna el login del usuario
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Usuarios.Usuario.nombre">
+            <summary>
+            Propiedad que retorna el nombre del usuario
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Usuarios.Usuario.descripcion">
+            <summary>
+            Propiedad que retorna una descripcion corta del usuario
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Usuarios.Usuario.clave">
+            <summary>
+            Propiedad que retorna la clave cifrada del usuario
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Usuarios.Usuario.fechaexpiracion">
+            <summary>
+            Propiedad que retorna la fecha en la que expira el usuario usuario
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Usuarios.Usuario.fechaexpiracionpwd">
+            <summary>
+            Propiedad que retorna la fecha en la que expira la clave del usuario 
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Usuarios.Usuario.cambioproxlogin">
+            <summary>
+            Propiedad que indica si el usuario debe cambiar la clave en el proximo login
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Usuarios.Usuario.puedecambiarclave">
+            <summary>
+            Propiedad que indica si el usuario puede cambiar su clave
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Usuarios.Usuario.estaactivo">
+            <summary>
+            Propiedad que indica si el usuario esta activo
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Usuarios.Usuario.clavenoexpira">
+            <summary>
+            Propiedad que indica que la clave del usuario no expira
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Usuarios.Usuario.esadmin">
+            <summary>
+            Propiedad que indica si el usuario es administrador de seguridad
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Usuarios.Usuario.email">
+            <summary>
+            Propiedad que retorna el email del usuario
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Usuarios.Usuario.usadominio">
+            <summary>
+            Propiedad que indica si el usuario se autentica con dominio (autenticacion integrada)
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Entidades.Usuarios.Usuario.dominio">
+            <summary>
+            Propiedad que retorna el dominio con el que se autentica el usuario
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Aplicaciones.IAplicaciones">
+            <summary>
+            Interfaz para el manejo de la entidad Aplicaciones
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Aplicaciones.IAplicaciones.Actualizar(System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Metodo generico para actualizar un item
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Aplicaciones.IAplicaciones.Eliminar(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para eliminar un item
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Aplicaciones.IAplicaciones.Obtener(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para obtener una Aplicacion en especifico
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Aplicaciones.IAplicaciones.ObtenerUsuarios_Aplicacion(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para obtener los usuarios asociados a una aplicación
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Aplicaciones.IAplicaciones.ObtenerMenus_Aplicacion(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para obtener Menus asociados a una aplicacion
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Aplicaciones.IAplicaciones.ObtenerObjetos_Aplicacion(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para obtener objetos asociados a una aplicacion
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Aplicaciones.IAplicaciones.ObtenerGrupos_Aplicacion(System.Int32,System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para obtener grupos asociados a una aplicacion
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Aplicaciones.IAplicaciones.ObtenerToolbars_Aplicacion(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para obtener grupos asociados a una aplicacion
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Aplicaciones.IAplicaciones.AsociarGrupos_Aplicacion(System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Metodo generico para asociar o desasociar Grupos a una aplicación
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Aplicaciones.IAplicaciones.ObtenerUsuarios_Aplicacion(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para consultar los usuarios asociados a una aplicacion
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Aplicaciones.IAplicaciones.ObtenerRoles_Aplicacion(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para consultar los roles asociados a una aplicacion
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Aplicaciones.IAplicaciones.Actualizar_MenusPorAplicacion(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Actualizar la opción de menus por aplicación
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Aplicaciones.IAplicaciones.Eliminar_MenusPorAplicacion(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Eliminar la opción de menus por aplicación
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Aplicaciones.IAplicaciones.ActualizarRoles_Aplicacion(System.Int32,System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Metodo generico para crear un rol
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Aplicaciones.IAplicaciones.EliminarRoles_Aplicacion(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para eliminar un rol
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Aplicaciones.IAplicaciones.AsociarUsuarios_Aplicacion(System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Metodo generico para asociar o desasociar Usuarios a una aplicación
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Aplicaciones.IAplicaciones.Actualizar_ObjetosAplicacion(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Actualizar la opción de objetos
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Aplicaciones.IAplicaciones.Eliminar_ObjetosAplicacion(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Eliminar la opción de objetos
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Aplicaciones.IAplicaciones.Actualizar_ToolbarAplicacion(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Actualizar toolbars
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Aplicaciones.IAplicaciones.Eliminar_ToolbarAplicacion(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Eliminar la opción de objetos
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Aplicaciones.IAplicaciones.ObtenerUsuariosNoAutorizados_Aplicacion(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Obtiene los usuarios no autorizados en una aplicacion
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Aplicaciones.IAplicaciones.ObtenerGruposNoAutorizados_Aplicacion(System.Int32,System.String)">
+            <summary>
+            Metodo generico para obtener grupos no autorizados en una aplicacion
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Genericas.IGenerico">
+            <summary>
+            Interfaz para el manejo de la entidad Usuario
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Genericas.IGenerico.RetornarMensajesSeparados(System.Collections.Generic.List{A2Utilidades_Servicios_Seguridad_APP.Entidades.Genericas.GenericoMensajesRespuesta})">
+            <summary>
+            Metodo generico para retornar una lista de mensajes separados
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Genericas.IGenerico.TieneMensajesError(System.Collections.Generic.List{A2Utilidades_Servicios_Seguridad_APP.Entidades.Genericas.GenericoMensajesRespuesta})">
+            <summary>
+            Metodo generico para retornar sí la actualización de un registro tuvo error
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Genericas.IGenerico.ObtenerUsuarioLogueado">
+            <summary>
+            Metodo generico para retornar el usuario cuando se tiene seguridad integrada
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Genericas.IGenerico.ObtenerInfoSesion(System.String)">
+            <summary>
+            Metodo generico para retornar el info sessión
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Genericas.IGenerico.RetornarValidacionesMensajesSeparados(System.String)">
+            <summary>
+            Metodo generico para retornar una lista de mensajes separados
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Genericas.IGenerico.RetornarValidacionesMensajesSeparados(System.Collections.Generic.List{System.String})">
+            <summary>
+            Metodo generico para retornar una lista de mensajes separados
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Grupos.IGrupos">
+            <summary>
+            Interfaz para el manejo de la entidad Grupos
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Grupos.IGrupos.Actualizar(System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Metodo generico para actualizar un item
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Grupos.IGrupos.Eliminar(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para eliminar un item
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Grupos.IGrupos.Obtener(System.String)">
+            <summary>
+            Metodo generico para obtener los datos de los Grupos
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Grupos.IGrupos.Obtener(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para obtener un Grupo en especifico
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Grupos.IGrupos.ObtenerAplicaciones_Grupo(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para obtener una Aplicaciones asociadas a un grupo
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Grupos.IGrupos.ObtenerAplicaciones_Grupo(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para obtener una Aplicaciones asociadas a un grupo
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Grupos.IGrupos.ObtenerRolesAplicacion_Grupo(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para obtener los roles asociados a un grupo en una aplicación
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Grupos.IGrupos.ObtenerRolesAplicacion_Grupo(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para obtener los roles asociados a un grupo en una aplicación
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Grupos.IGrupos.AsociarRolesAplicacion_Grupo(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Metodo generico para asociar o desasociar los roles para una aplicación asociando a un grupo
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Grupos.IGrupos.AsociarUsuarios_Grupo(System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Metodo generico para asociar o desasociar los roles para una aplicación asociando a un grupo
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Grupos.IGrupos.ObtenerUsuarios_Grupo(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para obtener los usuarios asociados a un grupo
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Grupos.IGrupos.ObtenerUsuarios_Grupo(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para obtener los usuarios asociados a un grupo
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Objetos.ITiposObjetos">
+            <summary>
+            Interfaz para el manejo de la entidad Roles
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Objetos.ITiposObjetos.Actualizar(System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Metodo generico para actualizar un item
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Objetos.ITiposObjetos.Eliminar(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para eliminar un item
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Objetos.ITiposObjetos.Obtener(System.Int32,System.String)">
+            <summary>
+            Metodo generico para obtener los datos de los Tipos de objetos por aplicación
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Objetos.ITiposObjetos.Obtener(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para obtener un Tipo de objeto en especifico
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Roles.IRoles">
+            <summary>
+            Interfaz para el manejo de la entidad Roles
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Roles.IRoles.Actualizar(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Metodo generico para actualizar un item
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Roles.IRoles.Eliminar(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para eliminar un item
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Roles.IRoles.Obtener(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para obtener los datos de los Roles por aplicación
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Roles.IRoles.Obtener(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para obtener un Rol en especifico
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Toolbars.IToolbar">
+            <summary>
+            Interfaz para el manejo de la entidad Roles
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Toolbars.IToolbar.Actualizar(System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Metodo generico para actualizar un item
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Toolbars.IToolbar.Eliminar(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para eliminar un item
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Toolbars.IToolbar.Obtener(System.Int32,System.String)">
+            <summary>
+            Metodo generico para obtener los datos de los Roles por aplicación
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Toolbars.IToolbar.Obtener(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para obtener un Rol en especifico
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Usuarios.IUsuarios">
+            <summary>
+            Interfaz para el manejo de la entidad Usuario
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Usuarios.IUsuarios.Actualizar(System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Metodo generico para actualizar un item
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Usuarios.IUsuarios.Eliminar(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para eliminar un item
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Usuarios.IUsuarios.Obtener(System.String)">
+            <summary>
+            Metodo generico para obtener los datos de Usuario
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Usuarios.IUsuarios.Obtener(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para obtener un Usuario en especifico
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Usuarios.IUsuarios.ObtenerAplicaciones_Usuario(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para obtener una Aplicaciones asociadas a un usuario
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Usuarios.IUsuarios.ObtenerAplicaciones_Usuario(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para obtener una Aplicaciones asociadas a un usuario
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Usuarios.IUsuarios.AsociarUsuarios_Aplicacion(System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Metodo generico para asociar o desasociar los usuarios para una aplicación
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Usuarios.IUsuarios.ObtenerRolesAplicacion_Usuario(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para obtener los roles asociados a un usuario en una aplicación
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Usuarios.IUsuarios.ObtenerRolesAplicacion_Usuario(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para obtener los roles asociados a un usuario en una aplicación
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Usuarios.IUsuarios.AsociarRolesAplicacion_Usuario(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Metodo generico para asociar o desasociar los roles para una aplicación asociando a un usuario
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Usuarios.IUsuarios.ObtenerGrupos_Usuario(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para obtener los grupos a un usuario
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Usuarios.IUsuarios.ObtenerGrupos_Usuario(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para obtener los grupos a un usuario
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Interfaces.Usuarios.IUsuarios.AsociarGrupos_Usuario(System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Metodo generico para asociar o desasociar los grupos a un usuario
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.AplicacionDTO">
+            <summary>
+            DTO para transformar la informacion de la aplicacion
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.AplicacionDTO.id">
+            <summary>
+            Id de la aplicacion
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.AplicacionDTO.nombre">
+            <summary>
+            nombre de la aplicacion
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.AplicacionDTO.version">
+            <summary>
+            version de la aplicacion
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.AplicacionDTO.descripcion">
+            <summary>
+            descripcion corta de la aplicacion
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.AplicacionDTO.fechacrreacion">
+            <summary>
+            fecha de creacion de la aplicacion
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.AplicacionDTO.acercade">
+            <summary>
+            texto acerca de. de la aplicacion
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.AplicacionDTO.soporte">
+            <summary>
+            soporte
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.AplicacionDTO.derechosautor">
+            <summary>
+            derechos de autor
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.AplicacionDTO.nombreclave">
+            <summary>
+            nombre clave
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.AplicacionDTO.win32">
+            <summary>
+            win32
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.AplicacionDTO.web">
+            <summary>
+            web
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.AplicacionDTO.hacerloginout">
+            <summary>
+            hacer log inout
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.AplicacionDTO.hacerlogmenus">
+            <summary>
+            hacer log menus
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.AplicacionDTO.hacerlognt">
+            <summary>
+            hacer log NT
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.AplicacionDTO.rutalog">
+            <summary>
+            hacer log NT
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.AplicacionDTO.separadorroles">
+            <summary>
+            separador de roles
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.AplicacionDTO.fechaactualizacion">
+            <summary>
+            fecha de la ultima actualizacion
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.AplicacionDTO.rutabasearchivos">
+            <summary>
+            ruta base de archivos
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.AplicacionDTO.urlarchivos">
+            <summary>
+            url de archivos
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.MenuPorAplicacionDTO">
+            <summary>
+            DTO para transformar la informacion del menu por aplicacion
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.MenuPorAplicacionDTO.id">
+            <summary>
+            id del menu
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.MenuPorAplicacionDTO.titulo">
+            <summary>
+            titulo del menu
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.MenuPorAplicacionDTO.nombre">
+            <summary>
+            nombre
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.MenuPorAplicacionDTO.orden">
+            <summary>
+            orden
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.MenuPorAplicacionDTO.tooltip">
+            <summary>
+            texto de ayuda
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.MenuPorAplicacionDTO.roles">
+            <summary>
+            roles asociados
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.MenuPorAplicacionDTO.tipoweb">
+            <summary>
+            tipo web
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.MenuPorAplicacionDTO.hipervinculo">
+            <summary>
+            hipervinculo
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.MenuPorAplicacionDTO.paginafondo">
+            <summary>
+            pagina fondo
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.MenuPorAplicacionDTO.descripcion">
+            <summary>
+            descripcion del menu
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.MenuPorAplicacionDTO.tipoobjeto">
+            <summary>
+            tipo objeto
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Aplicaciones.MenuPorAplicacionDTO.toolbar">
+            <summary>
+            toolbar
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Genericas.GenericoMensajesRespuestaDTO">
+            <summary>
+            Detalle de los mensajes de error y exitosos
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Genericas.GenericoMensajesRespuestaDTO.mensaje">
+            <summary>
+            mensaje de validación sí es el caso
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Genericas.GenericoMensajesRespuestaDTO.proceso">
+            <summary>
+            Proceso que se esta ejecutando
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Genericas.GenericoMensajesRespuestaDTO.idregistro">
+            <summary>
+            Id del registro actualizado sí es exitoso
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Genericas.GenericoMensajesRespuestaDTO.exitoso">
+            <summary>
+            indica sí fue exitoso la actualización
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Genericas.GenericoMensajesRespuestaUnificadoDTO">
+            <summary>
+            Detalle de los mensajes de error y exitosos
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Genericas.GenericoMensajesRespuestaUnificadoDTO.cantidaderrores">
+            <summary>
+            Indica la cantidad de errores generados
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Genericas.GenericoMensajesRespuestaUnificadoDTO.cantidadexitosos">
+            <summary>
+            Indica la cantidad de mensajes exitosos
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Genericas.GenericoMensajesRespuestaUnificadoDTO.errores">
+            <summary>
+            Lista que contiene los mensajes de error
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Genericas.GenericoMensajesRespuestaUnificadoDTO.exitosos">
+            <summary>
+            Lista que contiene los mensajes de exitosos
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Grupos.GrupoDTO">
+            <summary>
+            Grupos
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Grupos.GrupoDTO.id">
+            <summary>
+            Propiedad que retorna el id del grupo
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Grupos.GrupoDTO.nombregrupo">
+            <summary>
+            Propiedad que retorna el nombre del grupo
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Grupos.GrupoDTO.descripcion">
+            <summary>
+            Propiedad que retorna la descripcion corta del grupo
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Objetos.TipoObjetoDTO">
+            <summary>
+            DTO que representa un tipo de objeto 
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Objetos.TipoObjetoDTO.id">
+            <summary>
+            Id del objeto
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Objetos.TipoObjetoDTO.idaplicacion">
+            <summary>
+            Id de la aplicacion
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Objetos.TipoObjetoDTO.nombre">
+            <summary>
+            nombre del tipo de objeto
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Objetos.TipoObjetoDTO.descripcion">
+            <summary>
+            descripcion
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Objetos.TipoObjetoDTO.borrable">
+            <summary>
+            indica si se puede borrar
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Objetos.TipoObjetoDTO.actualizable">
+            <summary>
+            indica si se puede actualizar
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Roles.RolDTO">
+            <summary>
+            DTO del rol
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Roles.RolDTO.id">
+            <summary>
+            Propiedad que retorna el id del rol
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Roles.RolDTO.idaplicacion">
+            <summary>
+            Propiedad que retorna el id de la aplicacion
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Roles.RolDTO.inicial">
+            <summary>
+            Propiedad que retorna la inicial del rol
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Roles.RolDTO.nombre">
+            <summary>
+            Propiedad que retorna el nombre del rol
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Roles.RolDTO.descripcion">
+            <summary>
+            Propiedad que retorna una descripcion corta del rol
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Roles.RolDTO.actualizable">
+            <summary>
+            Propiedad que indica si el rol se puede actualizar
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Roles.RolDTO.borrable">
+            <summary>
+            Propiedad que indica si el rol se puede borrar
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Roles.RolDTO.fechaactualizacion">
+            <summary>
+            Propiedad que retorna la fecha de la ultima modificacion
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Toolbars.ToolbarDTO">
+            <summary>
+            DTO para controlar los tados del toolbar
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Toolbars.ToolbarDTO.id">
+            <summary>
+            Id del toolbar en el sistema
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Toolbars.ToolbarDTO.idaplicacion">
+            <summary>
+            Id de la aplicacion en el sistema
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Toolbars.ToolbarDTO.nombreforma">
+            <summary>
+            nombre de la forma
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Toolbars.ToolbarDTO.nombreboton">
+            <summary>
+            nombre del boton
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Toolbars.ToolbarDTO.orden">
+            <summary>
+            orden del control
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Toolbars.ToolbarDTO.roles">
+            <summary>
+            roles asociados
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Toolbars.ToolbarDTO.tipoboton">
+            <summary>
+            tipo de boton
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Toolbars.ToolbarDTO.accion">
+            <summary>
+            accion que realiza
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Toolbars.ToolbarDTO.imagen">
+            <summary>
+            imagen
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Toolbars.ToolbarDTO.owner">
+            <summary>
+            dueno del objeto
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Toolbars.ToolbarDTO.tooltip">
+            <summary>
+            mensaje de ayuda
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Usuarios.UsuarioDTO">
+            <summary>
+            Usuario
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Usuarios.UsuarioDTO.id">
+            <summary>
+            Propiedad que retorna el id del usuario
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Usuarios.UsuarioDTO.login">
+            <summary>
+            Propiedad que retorna el login del usuario
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Usuarios.UsuarioDTO.nombre">
+            <summary>
+            Propiedad que retorna el nombre del usuario
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Usuarios.UsuarioDTO.descripcion">
+            <summary>
+            Propiedad que retorna una descripcion corta del usuario
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Usuarios.UsuarioDTO.clave">
+            <summary>
+            Propiedad que retorna la clave cifrada del usuario
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Usuarios.UsuarioDTO.fechaexpiracion">
+            <summary>
+            Propiedad que retorna la fecha en la que expira el usuario usuario
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Usuarios.UsuarioDTO.fechaexpiracionpwd">
+            <summary>
+            Propiedad que retorna la fecha en la que expira la clave del usuario 
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Usuarios.UsuarioDTO.cambioproxlogin">
+            <summary>
+            Propiedad que indica si el usuario debe cambiar la clave en el proximo login
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Usuarios.UsuarioDTO.puedecambiarclave">
+            <summary>
+            Propiedad que indica si el usuario puede cambiar su clave
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Usuarios.UsuarioDTO.estaactivo">
+            <summary>
+            Propiedad que indica si el usuario esta activo
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Usuarios.UsuarioDTO.clavenoexpira">
+            <summary>
+            Propiedad que indica que la clave del usuario no expira
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Usuarios.UsuarioDTO.esadmin">
+            <summary>
+            Propiedad que indica si el usuario es administrador de seguridad
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Usuarios.UsuarioDTO.email">
+            <summary>
+            Propiedad que retorna el email del usuario
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Usuarios.UsuarioDTO.usadominio">
+            <summary>
+            Propiedad que indica si el usuario se autentica con dominio (autenticacion integrada)
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Models.DTO.Entidades.Usuarios.UsuarioDTO.dominio">
+            <summary>
+            Propiedad que retorna el dominio con el que se autentica el usuario
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Parametros.Genericos.CodigosRelacionados">
+            <summary>
+            Parametro generico para recibir cualquier id
+            </summary>
+        </member>
+        <member name="P:A2Utilidades_Servicios_Seguridad_APP.Parametros.Genericos.CodigosRelacionados.id">
+            <summary>
+            Parametro generico para recibir cualquier id
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Servicios.Aplicaciones.AplicacionServicio">
+            <summary>
+            Servicio para manejar las actualizaciones de la interfaz
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Aplicaciones.AplicacionServicio.#ctor(A2Utilidades_Servicios_Seguridad_APP.ContextosDB.ContextoDbUtil,A2Utilidades_Servicios_Seguridad_APP.Interfaces.Genericas.IGenerico)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Aplicaciones.AplicacionServicio.Actualizar(System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Metodo para realizar la actualización o creación de una aplicación, dentro del json se enviara un objeto de la entidad
+            Aplicacion
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Aplicaciones.AplicacionServicio.Eliminar(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para realizar eliminar una aplicación y todos sus relacionados
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Aplicaciones.AplicacionServicio.Obtener(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para obtener una aplicación en especifico
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Aplicaciones.AplicacionServicio.ObtenerUsuarios_Aplicacion(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para obtener los Usuario asociados a una aplicación
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Aplicaciones.AplicacionServicio.ObtenerMenus_Aplicacion(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para obtener los menus asociados a una aplicacion
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Aplicaciones.AplicacionServicio.ObtenerObjetos_Aplicacion(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para obtener los tipos de objeto asociados a una aplicacion
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Aplicaciones.AplicacionServicio.ObtenerToolbars_Aplicacion(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para obtener los tollbar asociados a una aplicacion
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Aplicaciones.AplicacionServicio.ObtenerUsuarios_Aplicacion(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo generico para consultar los usuarios asociados a una aplicacion
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Aplicaciones.AplicacionServicio.ObtenerGrupos_Aplicacion(System.Int32,System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para consultar de los grupos a la aplicación
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Aplicaciones.AplicacionServicio.ObtenerRoles_Aplicacion(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para consultar de los grupos a la aplicación
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Aplicaciones.AplicacionServicio.Actualizar_MenusPorAplicacion(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Actualizar la opción de menus por aplicación
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Aplicaciones.AplicacionServicio.EliminarRoles_Aplicacion(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Eliminar roles por aplicación
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Aplicaciones.AplicacionServicio.Eliminar_MenusPorAplicacion(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Eliminar  menus por aplicación
+            </summary>         
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Aplicaciones.AplicacionServicio.AsociarGrupos_Aplicacion(System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Metodo para realizar la asociacion y desasociacion de grupos a una aplicacion
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Aplicaciones.AplicacionServicio.AsociarUsuarios_Aplicacion(System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Metodo para realizar la asociacion y desasociacion de usuarios a una aplicacion
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Aplicaciones.AplicacionServicio.ActualizarRoles_Aplicacion(System.Int32,System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Metodo para realizar la actualizacion de un rol
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Aplicaciones.AplicacionServicio.Actualizar_ObjetosAplicacion(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Actualizar la opción de tipos de objetos
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Aplicaciones.AplicacionServicio.Eliminar_ObjetosAplicacion(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Eliminar la opción de tipos de objetos
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Aplicaciones.AplicacionServicio.Actualizar_ToolbarAplicacion(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Actualizar toolbars de la aplicacion
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Aplicaciones.AplicacionServicio.Eliminar_ToolbarAplicacion(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Eliminar toolbars de la aplicacion
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Aplicaciones.AplicacionServicio.ObtenerUsuariosNoAutorizados_Aplicacion(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para obtener los Usuario no autorizados en una aplicación
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Aplicaciones.AplicacionServicio.ObtenerGruposNoAutorizados_Aplicacion(System.Int32,System.String)">
+            <summary>
+            Metodo para consultar de los grupos a la aplicación
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Servicios.Genericas.GenericoServicio">
+            <summary>
+            Servicio para manejar las actualizaciones de la interfaz
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Genericas.GenericoServicio.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Genericas.GenericoServicio.RetornarMensajesSeparados(System.Collections.Generic.List{A2Utilidades_Servicios_Seguridad_APP.Entidades.Genericas.GenericoMensajesRespuesta})">
+            <summary>
+            Metodo para retornar la lista de mensajes respuesta
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Genericas.GenericoServicio.TieneMensajesError(System.Collections.Generic.List{A2Utilidades_Servicios_Seguridad_APP.Entidades.Genericas.GenericoMensajesRespuesta})">
+            <summary>
+            Metodo para retornar la lista de mensajes respuesta
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Genericas.GenericoServicio.ObtenerUsuarioLogueado">
+            <summary>
+            Metodo generico para retornar el usuario logueado
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Genericas.GenericoServicio.ObtenerInfoSesion(System.String)">
+            <summary>
+            Metodo generico para retornar el info sessión
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Genericas.GenericoServicio.RetornarValidacionesMensajesSeparados(System.String)">
+            <summary>
+            Metodo para retornar la lista de mensajes respuesta
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Genericas.GenericoServicio.RetornarValidacionesMensajesSeparados(System.Collections.Generic.List{System.String})">
+            <summary>
+            Metodo para retornar la lista de mensajes respuesta
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Servicios.Grupos.GrupoServicio">
+            <summary>
+            Servicio para manejar las actualizaciones de la interfaz
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Grupos.GrupoServicio.#ctor(A2Utilidades_Servicios_Seguridad_APP.ContextosDB.ContextoDbUtil,A2Utilidades_Servicios_Seguridad_APP.Interfaces.Genericas.IGenerico)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Grupos.GrupoServicio.Actualizar(System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Metodo para realizar la actualización de un Usuario, dentro del json se enviara un objeto de la entidad
+            Grupo
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Grupos.GrupoServicio.AsociarRolesAplicacion_Grupo(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Metodo para realizar la asociación de roles aplicación por grupo
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Grupos.GrupoServicio.AsociarUsuarios_Grupo(System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Metodo para realizar la asociación de usuarios por grupo
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Grupos.GrupoServicio.Eliminar(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para realizar eliminar un grupo y sus relacionados
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Grupos.GrupoServicio.Obtener(System.String)">
+            <summary>
+            Metodo para obtener los grupos
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Grupos.GrupoServicio.Obtener(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para obtener un grupo en especifico
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Grupos.GrupoServicio.ObtenerAplicaciones_Grupo(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para obtener las aplicaciones por un grupo
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Grupos.GrupoServicio.ObtenerAplicaciones_Grupo(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para obtener una aplicación por un grupo en especifico
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Grupos.GrupoServicio.ObtenerRolesAplicacion_Grupo(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para obtener los roles de aplicación por grupo
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Grupos.GrupoServicio.ObtenerRolesAplicacion_Grupo(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para obtener los roles de aplicación por grupo
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Grupos.GrupoServicio.ObtenerUsuarios_Grupo(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para obtener los usuarios por grupo
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Grupos.GrupoServicio.ObtenerUsuarios_Grupo(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para obtener los usuarios por grupo
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Servicios.Objetos.TiposObjetoServicio">
+            <summary>
+            Servicio para manejar las actualizaciones de la interfaz
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Objetos.TiposObjetoServicio.Actualizar(System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Metodo para realizar la actualización de un Tipo de objeto, dentro del json se enviara un objeto de la entidad
+            TipoObjeto
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Objetos.TiposObjetoServicio.Eliminar(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para eliminar un Tipo de objeto
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Objetos.TiposObjetoServicio.Obtener(System.Int32,System.String)">
+            <summary>
+            Metodo para obtener los Tipos de objeto de una aplicación
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Objetos.TiposObjetoServicio.Obtener(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para obtener un Tipos de objeto
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Servicios.Roles.RolServicio">
+            <summary>
+            Servicio para manejar las actualizaciones de la interfaz
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Roles.RolServicio.#ctor(A2Utilidades_Servicios_Seguridad_APP.ContextosDB.ContextoDbUtil,A2Utilidades_Servicios_Seguridad_APP.Interfaces.Genericas.IGenerico)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Roles.RolServicio.Actualizar(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Metodo para realizar la actualización de un Rol, dentro del json se enviara un objeto de la entidad
+            Rol
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Roles.RolServicio.Eliminar(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para eliminar un Rol y sus asociados
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Roles.RolServicio.Obtener(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para obtener los Roles de una aplicación
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Roles.RolServicio.Obtener(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para obtener un Rol en especifico
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Servicios.ToolbarServicio">
+            <summary>
+            Servicio para manejar las actualizaciones de la interfaz
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.ToolbarServicio.Actualizar(System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Metodo para realizar la actualización de un Toolbar, dentro del json se enviara un objeto de la entidad
+            Toolbar
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.ToolbarServicio.Eliminar(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para eliminar un Toolbar
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.ToolbarServicio.Obtener(System.Int32,System.String)">
+            <summary>
+            Metodo para obtener los Toolbars de una aplicación en especifico
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.ToolbarServicio.Obtener(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para obtener un Toolbar en especifico
+            </summary>
+        </member>
+        <member name="T:A2Utilidades_Servicios_Seguridad_APP.Servicios.Usuarios.UsuarioServicio">
+            <summary>
+            Servicio para manejar las actualizaciones de la interfaz
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Usuarios.UsuarioServicio.#ctor(A2Utilidades_Servicios_Seguridad_APP.ContextosDB.ContextoDbUtil,A2Utilidades_Servicios_Seguridad_APP.Interfaces.Genericas.IGenerico)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Usuarios.UsuarioServicio.Actualizar(System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Metodo para realizar la actualización de un Usuario, dentro del json se enviara un objeto de la entidad
+            Usuario
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Usuarios.UsuarioServicio.AsociarUsuarios_Aplicacion(System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Metodo para realizar la asociacion de uno o varios Usuarios, dentro del json se enviara un objeto de la entidad
+            Usuarios
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Usuarios.UsuarioServicio.AsociarUsuarios_Grupo(System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Metodo para realizar la asociacion de uno o varios Usuarios a un grupo, dentro del json se enviara una lista del objeto de la entidad
+            Usuario
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Usuarios.UsuarioServicio.Eliminar(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para eliminar un grupo y sus asociados
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Usuarios.UsuarioServicio.Obtener(System.String)">
+            <summary>
+            Metodo para obtener los Usuarios
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Usuarios.UsuarioServicio.Obtener(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para obtener un Usuario en especifico
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Usuarios.UsuarioServicio.ObtenerUsuarios_Grupo(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para obtener los Usuario asociados a un grupo
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Usuarios.UsuarioServicio.ObtenerAplicaciones_Usuario(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para obtener las aplicaciones asociadas a un usuario en especifico
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Usuarios.UsuarioServicio.ObtenerAplicaciones_Usuario(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para obtener las aplicaciones asociadas a un usuario en especifico
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Usuarios.UsuarioServicio.ObtenerRolesAplicacion_Usuario(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para obtener los roles de una aplicación asociados a un usuario en especifico
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Usuarios.UsuarioServicio.ObtenerRolesAplicacion_Usuario(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para obtener los roles de una aplicación asociados a un usuario en especifico
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Usuarios.UsuarioServicio.AsociarRolesAplicacion_Usuario(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Metodo para realizar la asociación de Roles de una aplicación a un Usuario, dentro del json se enviara una lista del objeto de la entidad
+            Roles
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Usuarios.UsuarioServicio.ObtenerGrupos_Usuario(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para obtener los grupos asociados a un usuario
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Usuarios.UsuarioServicio.ObtenerGrupos_Usuario(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Metodo para obtener los grupos asociados a un usuario
+            </summary>
+        </member>
+        <member name="M:A2Utilidades_Servicios_Seguridad_APP.Servicios.Usuarios.UsuarioServicio.AsociarGrupos_Usuario(System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Metodo generico para asociar o desasociar los grupos a un usuario
+            </summary>
+        </member>
+        <member name="T:Api_Servicios_Seguridad.Program">
+            <summary>
+            clase inicial del api
+            </summary>
+        </member>
+        <member name="M:Api_Servicios_Seguridad.Program.Main(System.String[])">
+            <summary>
+            metodo principal
+            </summary>
+        </member>
+        <member name="M:Api_Servicios_Seguridad.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            metodo principal
+            </summary>
+        </member>
+        <member name="T:Api_Servicios_Seguridad.Startup">
+            <summary>
+            Clase inicial de la aplicación
+            </summary>
+        </member>
+        <member name="M:Api_Servicios_Seguridad.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:Api_Servicios_Seguridad.Startup.Configuration">
+            <summary>
+            propiedad que obtiene la configuración inicial
+            </summary>
+        </member>
+        <member name="M:Api_Servicios_Seguridad.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Metodo para realizar la configuración inicial
+            </summary>
+        </member>
+        <member name="M:Api_Servicios_Seguridad.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+        </member>
+        <member name="T:Api_Servicios_Seguridad.Startup.ApiExplorerGroupPerVersionConvention">
+            <summary>
+            clase que sirve para mostrar la documentación swagger
+            </summary>
+        </member>
+        <member name="M:Api_Servicios_Seguridad.Startup.ApiExplorerGroupPerVersionConvention.Apply(Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerModel)">
+            <summary>
+            metodo que sirve para mostrar la documentación swagger
+            </summary>
+        </member>
+        <member name="T:Api_Seguridad">
+            <summary>
+            Este metodo verifica que el usuario contenga la validación de los roles de seguridad
+            </summary>
+        </member>
+        <member name="F:Api_Seguridad.POLITICA_SEGURIDAD">
+            <summary>
+            Constante para almacenar el valor de la politica de seguridad del API
+            </summary>
+        </member>
+        <member name="F:Api_Seguridad.ROLES_CONFIGURACION">
+            <summary>
+            Constante para almacenar el key del parametro que almacena los roles permitidos
+            </summary>
+        </member>
+        <member name="M:Api_Seguridad.verificarRolUsuario(Microsoft.AspNetCore.Authorization.AuthorizationHandlerContext,System.String[],System.String)">
+            <summary>
+            Este metodo verifica que el usuario contenga la validación de los roles de seguridad
+            </summary>
+        </member>
+    </members>
+</doc>

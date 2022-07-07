@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Examen_Ingreso</name>
+    </assembly>
+    <members>
+        <member name="T:Examen_Ingreso.ContextosDB.ContextoDbExamen">
+            <summary>
+            Contexto de conexión hacia la base de datos
+            </summary>
+        </member>
+        <member name="M:Examen_Ingreso.ContextosDB.ContextoDbExamen.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{Examen_Ingreso.ContextosDB.ContextoDbExamen})">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:Examen_Ingreso.Program">
+            <summary>
+            clase inicial del api
+            </summary>
+        </member>
+        <member name="M:Examen_Ingreso.Program.Main(System.String[])">
+            <summary>
+            metodo principal
+            </summary>
+        </member>
+        <member name="M:Examen_Ingreso.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            metodo principal
+            </summary>
+        </member>
+        <member name="T:Examen_Ingreso.Startup">
+            <summary>
+            Clase inicial de la aplicación
+            </summary>
+        </member>
+        <member name="M:Examen_Ingreso.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:Examen_Ingreso.Startup.Configuration">
+            <summary>
+            propiedad que obtiene la configuración inicial
+            </summary>
+        </member>
+        <member name="M:Examen_Ingreso.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Metodo para realizar la configuración inicial
+            </summary>
+        </member>
+        <member name="M:Examen_Ingreso.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+        </member>
+        <member name="T:Examen_Ingreso.Startup.ApiExplorerGroupPerVersionConvention">
+            <summary>
+            clase que sirve para mostrar la documentación swagger
+            </summary>
+        </member>
+        <member name="M:Examen_Ingreso.Startup.ApiExplorerGroupPerVersionConvention.Apply(Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerModel)">
+            <summary>
+            metodo que sirve para mostrar la documentación swagger
+            </summary>
+        </member>
+    </members>
+</doc>
